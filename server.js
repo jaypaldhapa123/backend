@@ -7,7 +7,12 @@ const cors = require("cors");
 // middleware
 
 app.use(express.json());
-app.use(cors());
+// Allow requests from your frontend domain
+app.use(cors({
+  origin: "https://webzentra.netlify.app", // or "*" for all origins (not recommended for production)
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
 
 //connect mongodb
 

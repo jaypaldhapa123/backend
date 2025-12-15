@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "start": "node server.js",
-  "test": "echo \"Error: no test specified\" && exit 1"
-},
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JaypalDhapa/WEbZentra.git"
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/JaypalDhapa/WEbZentra#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "mongoose": "^9.0.1",
