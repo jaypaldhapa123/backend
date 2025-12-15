@@ -7,9 +7,7 @@ const cors = require("cors");
 // middleware
 
 app.use(express.json());
-app.use(cors({
-  origin: "*" // for testing; later replace with your Netlify URL
-}));
+app.use(cors());
 
 //connect mongodb
 
