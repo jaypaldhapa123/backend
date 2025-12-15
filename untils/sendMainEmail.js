@@ -7,7 +7,6 @@ console.log(mainAdminTemplate);
 const sendMainEmail = async (data) =>{
     try{
         const finalmail = await mainAdminTemplate(data);
-        console.log(data);
         await transpotar.sendMail({
             from:"jaypaldhapa7990@gmail.com",
             to:"contact.webzentra@gmail.com",
