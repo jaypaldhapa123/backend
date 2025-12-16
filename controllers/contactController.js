@@ -9,17 +9,17 @@ exports.submitForm = async (req,res) =>{
 
         //main Email
         // await sendMainEmail(req.body);
-        const mainemail =  sendMainEmail(req.body);
+        // const mainemail =  sendMainEmail(req.body);
 
         //AutoReply Thank you Email
         // await sendThankYou(req.body);
-        const thankyoumail =  sendThankYou(req.body);
+        // const thankyoumail =  sendThankYou(req.body);
 
         //save into database
         // await Contact.create({name,email,phone,company,country,message,});
-        const savedata =  Contact.create({name,email,phone,company,country,message,});
+        const savedata =  await Contact.create({name,email,phone,company,country,message,});
 
-        await Promise.all([sendMainEmail,thankyoumail,savedata]);
+        // await Promise.all([sendMainEmail,thankyoumail,savedata]);
         
         res.json({
             success:true,
